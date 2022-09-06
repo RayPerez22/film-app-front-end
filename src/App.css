@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 body {
   background-color: #0d0d0d;
@@ -9,14 +9,11 @@ body {
 
 .film-app > .row {
   overflow-x: auto;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
 }
 
-/* .row {
-  width: auto;
-} */
- .image-container {
+.image-container {
   position: relative;
   transition: transform 0.2s;
  }

@@ -7,7 +7,8 @@ const SearchField = (props) => {
                 className='form-control'
                 value={props.value}
                 onChange={(event) => props.setSearchValue(event.target.value)}
-                placeholder='type to search...'></input>
+                placeholder='search film...'>
+            </input>
         </div>
     )
 }
