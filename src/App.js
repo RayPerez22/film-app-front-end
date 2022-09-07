@@ -7,10 +7,11 @@ import FilmListHeading from './components/FilmListHeading';
 import SearchField from './components/SearchField';
 // import AddFav from './components/AddFav';
 import Home from './pages/Home';
-import Show from './pages/Show';
-import Profile from './components/Profile';
-import NewProfile from './components/NewProfile';
+import ShowPro from './pages/ShowPro';
+import Profile from './pages/Profile';
+import CreateProfile from './components/CreateProfile';
 import NotFound from './pages/NotFound';
+import ShowFilm from './pages/ShowFilm';
 
 
 function App() {
@@ -45,11 +46,11 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path="/:id" element={<Show />} />
+          <Route path="/:id" element={<ShowPro />} />
+          <Route path='/film/:id' element={<ShowFilm />} />
           <Route path='/profile'>
             <Route index element={<Profile />} />
-            <Route path=':id' element={<Profile />} />
-            <Route path='new' element={<NewProfile />} />
+            <Route path='new' element={<CreateProfile />} />
           </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>
