@@ -9,7 +9,6 @@ const Show = () => {
     useEffect(() => {
         getFilmProId(id)
         .then(res => setShowPro(res.data))
-        console.log(showPro.fav_films)
     }, [])
     
 
@@ -20,8 +19,11 @@ const Show = () => {
              <ul>
                 {showPro.fav_films && showPro.fav_films.map((Pro) => {
                     return (
+                        <>
+                         <h1>{Pro.Title}</h1>
                         
-                        <h1>{Pro.Title}</h1>
+                        </>
+                       
                     )
                 })}
 

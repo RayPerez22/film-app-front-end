@@ -10,7 +10,7 @@ const Profile = () => {
     getFilmPro()
       .then(res => setFilm(res.data)) 
   }, [])
-  console.log(films)
+
 
 
   return (
@@ -18,9 +18,9 @@ const Profile = () => {
       <h1>Hi {id}</h1>      
       <Link to='/profile/new'>Create Profile</Link>
       <ul>
-                {films.map((film) => {
+                {films && films.map((film, i) => {
                     return (
-                        <li><a href={`/${film._id}`}>{film.user}</a>
+                        <li key={i}><a href={`/${film._id}`}>{film.user}</a>
                         </li>
                     )
                 })}

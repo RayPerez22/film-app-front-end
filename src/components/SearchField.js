@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchField = (props) => {
     return (
-        <div className='col col-sm-4'>
+        <div className='top col-sm-4'>
             <input
                 className='form-control'
                 value={props.value}

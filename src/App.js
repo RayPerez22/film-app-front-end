@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import FilmList from './components/FilmList';
 import FilmListHeading from './components/FilmListHeading';
 import SearchField from './components/SearchField';
-// import AddFav from './components/AddFav';
 import Home from './pages/Home';
 import ShowPro from './pages/ShowPro';
 import Profile from './pages/Profile';
@@ -28,7 +27,7 @@ function App() {
     if (resJson.Search) {
       setFilm(resJson.Search)
     }
-    //22:50
+
   }
 
   useEffect(() => {
@@ -41,7 +40,10 @@ function App() {
       <div className='col'>
         <FilmListHeading heading='Films' />
         <SearchField searchValue={searchValue} setSearchValue={setSearchValue} />
-        <FilmList film={film} />
+        <div className='movies'>
+          <FilmList film={film} />
+        </div>
+        
       </div>
       <Router>
         <Routes>
@@ -58,5 +60,5 @@ function App() {
     </div>
   )
 }
-//row d-flex align-items-center mt-4 mb-4
+
 export default App;
